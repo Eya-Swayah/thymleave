@@ -1,0 +1,88 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+            <button type="button" (click)="add()" class="btn btn-info">Add</button> 
+              <div class="card">
+               
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Control Table</h4>
+                      <p class="card-category"> Daily updates of climatisation</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                <tr>
+                                    <th class="hidden">Id</th>
+                                  <th>
+                                      Place
+                                  </th>
+                                  <th>
+                                      Temperature
+                                  </th>
+                                  <th>
+                                      Humidity 
+                                  </th>
+                                  <th>
+                                      Action 
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let p of list_copy">
+                                    <th class="hidden"> {{p.id}}</th>
+                                   <th>
+                                      {{p.place}}
+                                  </th>
+                                  <th>
+                                     {{p.temp}}
+                                  </th>
+                                  <th>
+                                      {{p.humidity}} 
+                                  </th>
+                                  <th>
+                                    <button type="button" (click)="delete(p.id)" class="btn btn-outline-danger">Delete</button>  <button type="button" (click) =" edit()" class="btn btn-outline-info">Edit </button>
+                                  </th>
+                                </tr> 
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12">
+              <div class="card card-plain">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title mt-0"> Control Table</h4>
+                      <p class="card-category"> latest Updates </p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table table-hover">
+                              <thead class="">
+                                <th class="hidden">Id</th>
+                                  <th>
+                                      Place
+                                  </th>
+                                  <th>
+                                      Temperature
+                                  </th>
+                                  <th>
+                                      Humidity
+                                  </th>
+                                  <th>
+                                      Action
+                                  </th>
+                              </thead>
+                              <tbody>
+                                
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title ">Control Table</h4>
+            <p class="card-category"> Daily updates of climatisation</p>
+        </div>
+        <div class="card-body">   
+                <h2 class="text-center">Add New Informations </h2>
+                <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="id" >id</label>
+                        <input type="number" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+                      </div>  
+                  <div class="form-group">
+                    <label for="place">Place</label>
+                    <input type="text" formControlName="place" placeholder="place" name="place" class="form-control" id="place">
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="temp">Temperature:</label>
+                    <input type="text" formControlName="temp" placeholder="température" name="temp" class="form-control" id="temp">
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="humidity"> Humidity :</label>
+                    <input formControlName="humidity" placeholder="Humidity " name="humidity " class="form-control" id="humidity">
+                  </div>
+              
+                
+              
+                  <button class="btn btn-success">Add</button>
+                </form>
+             
+            
+
+
+
+
+        
+        
+           
+        </div>
+    </div>
+</div>
